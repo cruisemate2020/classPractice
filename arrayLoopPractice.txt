@@ -1,0 +1,13 @@
+const fruits = ['apple', 'plum', 'strawberries'];
+
+// for loop
+for (let i = 0; i < fruits.length; i++){
+  console.log(fruits[i]);
+}
+
+// .forEach() method showing the index of each element
+//method ES5 and below
+fruits.forEach(function(elem, index){console.log(`${elem} ------> ${index}`)});
+
+//updated method ES6
+fruits.forEach((elem, index) => console.log(`${elem} ---> ${index}`));
