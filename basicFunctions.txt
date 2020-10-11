@@ -1,0 +1,16 @@
+function generateSum(num1, num2, num3){
+  return num1 + num2 + num3;
+}
+
+generateSum(2,5,7);
+
+function isNameOddOrEven(name){
+if(name.length % 2 === 0){
+  return (`${name} has an even number of letters`);
+}
+else{
+  return (`${name} has an odd number of letters`);
+}
+}
+
+isNameOddOrEven(`Valerie`);
