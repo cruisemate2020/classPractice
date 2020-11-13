@@ -54,6 +54,14 @@ bestFruit[0].className += ' best-fruit';
 bestFruit[2].className += ' best-fruit';
 console.log(bestFruit[0], bestFruit[2]);
 
+// bestFruit.forEach(el, index) => {
+//     if (index === 0 || index === 2){
+//         // el.className += 'best-fruit';
+//         el.classList.add('best-fruit');
+//     }
+//     console.log(el);
+// };
+
 
 // => <li class="fruit-item best-fruit">Pear</li>
 // => <li class="fruit-item best-fruit">Plum</li>
@@ -70,14 +78,22 @@ console.log(removeVeggieClass); //removes the class name, but leaves the word cl
 // ----------------------------------------------
 
 // 9: Add a class 'veggie-love' to all the veggies
+const veggieLove = document.querySelectorAll('.list-veggies ul li');
+// veggieLove.forEach(el => el.classList += ' veggie-love');
 
-// ... your code here
-
+veggieLove.forEach(el => el.classList.add('veggie-love'));
 // => <li class="veggie-item veggie-love">Broccoli</li> ...
 // ----------------------------------------------
 
 // 10: Remove class 'veggie-item' from 'spinach'
 
-// ... your code here
+veggieLove.forEach(el => {
+    if(el.innerHTML === 'Spinach') {
+        el.classList.remove('veggie-item');
+    }
+})
+
+// veggieLove[3].classList.remove('veggie-item');
+
 
 // => ... <li class="veggie-love">Spinach</li>
