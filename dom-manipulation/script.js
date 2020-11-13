@@ -54,21 +54,28 @@ const newItemInput = document.getElementById('item-input');
 const addItemButton = document.getElementById('add-item-button');
 const deleteButtons = document.querySelectorAll('.delete-item-button');
 
-
 addItemButton.addEventListener('click', () => {
     const listParent = document.getElementById('item-list');
+
     const newListItem = document.createElement('li');
     console.log(newItemInput.value);
-    newListItem.innerHTML = newItemInput.value;
+    newListItem.innerHTML = `${newItemInput.value} <button class="delete-item-button">🗑</button>`;
 
     listParent.appendChild(newListItem);
-})
 
-function deleteListItem(buttonUserClickedOn){
+    console.log(listParent.children);
+    const newDeleteButton = newListItem.querySelector('.delete-item-button');
+
+    deleteListItem(newDeleteButton);
+
+    newItemInput.value = '';
+});
+
+function deleteListItem(buttonUserClickedOn) {
     buttonUserClickedOn.addEventListener('click', () => {
-        const parentLiTag = buttonUserClickedOn.parentElement;
-        parentLiTag.remove();
-    })
+    const parentLiTag = buttonUserClickedOn.parentElement;
+    parentLiTag.remove();
+});
 }
 
 deleteButtons.forEach(deleteListItem);
