@@ -76,10 +76,17 @@ function drawText(){
 }
 
 function addImage(){
+    context.fillStyle = '#1E90FF';
+    context.font = '15px "Comic Sans MS"';
+
+    context.fillText('Brought to you by', 375, 575);
+    context.fillText('Codie & Opie', 375, 590,);
+    
+
     const catsImg = new Image();
 
     catsImg.src = './images/standoff.jpg'
     catsImg.addEventListener('load', () => {
-    context.drawImage(catsImg, 375, 425, 200, 150);
+    context.drawImage(catsImg, 375, 400, 200, 150);
     });
 }
