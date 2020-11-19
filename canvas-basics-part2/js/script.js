@@ -3,18 +3,18 @@ console.log('JS file connected');
 const canvas = document.getElementById('exercise');
 const context = canvas.getContext('2d');
 
-function drawFillRectangle(){
+const drawFillRectangle = () => {
     context.fillStyle='purple';
     context.fillRect(100, 100, 50, 50)    
 }
 
-function strokeRect(){
+const strokeRect = () => {
     context.lineWidth = 5;
     context.strokeStyle="pink";
     context.strokeRect(65, 400, 30, 30)
 }
 
-function drawRectPath(){
+const drawRectPath = () =>{
     context.beginPath();
     
     context.lineWidth = 7;
@@ -23,20 +23,20 @@ function drawRectPath(){
     context.moveTo(400, 50);
     context.lineTo(225, 50);
 
-    context.stroke();
+    // context.stroke();
     context.lineTo(225, 75);
 
-    context.stroke();
+    // context.stroke();
     context.lineTo(400, 75);
 
-    context.stroke();
+    // context.stroke();
     context.lineTo(400, 50);
 
     context.stroke();
     context.closePath();
 }
 
-function drawBullsEye(){
+const drawBullsEye = () => {
     context.beginPath();
     
     context.strokeStyle='#8B0000';
@@ -68,15 +68,15 @@ function drawBullsEye(){
     context.closePath();
 }        
 
-function drawText(){
+const drawText = () => {
     context.fillStyle = '#1E90FF';
     context.font = '30px Impact';
 
     context.fillText('🙌🏻 IronHack 🙌🏻', 25, 550);
 }
 
-function addImage(){
-    context.fillStyle = '#1E90FF';
+const addImage = () => {
+    context.fillStyle = 'brown';
     context.font = '15px "Comic Sans MS"';
 
     context.fillText('Brought to you by', 375, 575);
